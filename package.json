@@ -10,6 +10,9 @@
   "dependencies": {
     "bootstrap": "^4.1.3",
     "firebase": "^5.5.0",
+    "iscroll": "^5.2.0",
+    "jquery": "^2.2.4",
+    "jquery-drawer": "^3.2.2",
     "moment": "^2.22.2",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",

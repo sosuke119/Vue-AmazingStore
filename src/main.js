@@ -6,6 +6,7 @@ import './registerServiceWorker'
 import firebase from 'firebase/app'
 // eslint-disable-next-line
 import auth from 'firebase/auth'
+import './assets/css/main.styl'
 
 Vue.config.productionTip = false
 

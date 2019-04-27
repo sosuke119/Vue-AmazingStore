@@ -3,6 +3,7 @@ div
   .jumbotron.bg-primary.text-white.text-center
     h2.lead.display-3 VueSlack
     p Realtime comment
+    button.title click
   //- show loading state
   .alert.alert-info(v-if="loading") Processing ..
   //- show errors
