@@ -49,6 +49,9 @@ body
 .shadow
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.05)!important
 
+.active
+  color $yellow
+
 // navbar
 
 .navbar
@@ -68,6 +71,7 @@ body
   .navbar-mobile
     i
       font-size 22px
+      cursor pointer
     +web()
       display none
   .navbar-web
@@ -84,7 +88,43 @@ body
         text-decoration none
         font-weight bold
 
+.navbar-mobile-toggle
+  z-index 10
+  position fixed
+  width 100%
+  background #252423
+  left 0
+  bottom 0
+  top 0
+  // transition-duration:  5s
+  color white
+  i
+    font-size 26px
+    cursor pointer
+  .navbar-mobile-toggle-bar
+    height 70px
+    padding-top 20px
+  .in-sidebar
+    display none
+    a
+      color $gray
+  .category-title
+    padding 15px 0 15px 34px
+    font-size 22px
+    cursor pointer
+    &:active, &:hover
+      color $yellow
+    li
+      cursor pointer
+      padding 10px 0
+      &:hover
+        color $yellow
+
 // Main-content
+
+.main
+  +web()
+    margin-top -70px
 
 .category
   height 300px
@@ -95,6 +135,8 @@ body
     display none
     a
       color $gray
+
+
 .searchBar
   display none
   +web()
@@ -149,7 +191,65 @@ body
     display block
 
 .product
-  margin-top 85px
+  margin-top 20px
   +web()
     margin-top 25px
+  .shadow
+    img
+      max-height 180px
+
+// modal
+
+.modal-dialog
+  .modal-content
+    i
+      font-size 24px
+    .modal-views
+      padding-top 5px
+      padding-left 3px
+      letter-spacing 1px
+      font-size 14px
+      color $gray
+    .modal-cost
+      color $yellow
+      font-size 20px
+      font-weight bold
+      letter-spacing 2px
+    .modal-ml,.modal-description
+      color $gray
+      letter-spacing 1px
+    .btn-cart
+      margin-top 20px
+      width 100%
+      height 60px
+      background $purple
+      color white
+      font-size 20px
+      letter-spacing 1px
+    .modal-status
+      margin 0 15px
+      width 100%
+      padding 10px
+      background #FCF9F9
+      .dib
+        margin-right 20px
+      img,p
+        display inline-block
+      p
+        font-size 20px
+      img
+        margin-top -7px
+        margin-right 10px
+        height 25px
+    .modal-category
+      width 0
+      display none
+      +web()
+        width 48%
+        display block
+    .modal-close
+      width 100%
+      +web()
+        width 48%
+
 

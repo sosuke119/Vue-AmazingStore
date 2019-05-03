@@ -1,5 +1,21 @@
 <template lang="pug">
 div
+  button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal')
+  | Launch demo modal
+  //- // Modal
+  #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Modal title
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          | ...
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Save changes
+
   .jumbotron.bg-primary.text-white.text-center
     h2.lead.display-3 VueSlack
     p Realtime comment
@@ -23,6 +39,7 @@ export default {
   name: 'Login',
   data () {
     return {
+      navbar: false,
       errors: [],
       loading: false,
       usersRef: firebase.database().ref('users')
