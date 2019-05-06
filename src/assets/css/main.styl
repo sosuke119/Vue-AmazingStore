@@ -72,6 +72,13 @@ body
     i
       font-size 22px
       cursor pointer
+    input
+      border none
+      border-bottom 1px solid $yellow
+      width 60%
+      margin-top 8px
+      &:focus
+        outline none
     +web()
       display none
   .navbar-web
@@ -87,7 +94,21 @@ body
         color black
         text-decoration none
         font-weight bold
-
+    #login
+      .modal-content
+        width 500px
+        height 400px
+        background-image url('../images/bg-login.png')
+        .btn
+          position absolute
+          background rgba(0,0,0,0)
+          width 330px
+          height 80px
+          margin-left 85px
+          margin-top 191px
+          border-radius 50px
+          &:hover
+            box-shadow 0 5px 15px darken($yellow, 40%)
 .navbar-mobile-toggle
   z-index 10
   position fixed
@@ -127,7 +148,7 @@ body
     margin-top -70px
 
 .category
-  height 300px
+  padding-bottom 50px !important
   display none
   +web()
     display block
@@ -135,7 +156,16 @@ body
     display none
     a
       color $gray
-
+  .category-title
+    font-weight bold
+    font-size 18px
+    color $black
+    cursor pointer
+  li
+    margin 5px 0
+    a
+      color $gray
+      padding-left 10px
 
 .searchBar
   display none
@@ -183,7 +213,9 @@ body
     p
       color $gray
     span
-      color blue
+      margin-left 10px
+      color darken(orange,10%)
+      font-weight bold
 
 .brand-line
   display none
@@ -195,6 +227,7 @@ body
   +web()
     margin-top 25px
   .shadow
+    min-height 100%
     img
       max-height 180px
 

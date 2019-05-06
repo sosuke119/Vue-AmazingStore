@@ -75,7 +75,7 @@ export default {
         'cost': this.cost,
         'ml': this.ml,
         'sale': this.sale,
-        'category': 'Creams & gels'
+        'category': this.category
       })
         .then(data => {
           console.log(data)
