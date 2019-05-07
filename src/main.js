@@ -1,14 +1,13 @@
 import Vue from 'vue'
-import firebaseAuth from 'firebase/auth'
 import VueLazyload from 'vue-lazyload'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
 import './assets/css/main.styl'
-// require('firebase/auth')
+require('firebase/auth')
 
-Vue.use(VueLazyload, firebaseAuth)
+Vue.use(VueLazyload)
 Vue.config.productionTip = false
 
 new Vue({
